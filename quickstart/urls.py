@@ -13,9 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.urls import path
+from django.urls.conf import include
 from .views import helloAPI
 from quickstart.views import randomQuiz
+from rest_framework import routers
+from quickstart import views
+
 
 # 주소창에 다음과 같이 쓰여졌을 때 해당 views 의 def로 이동
 urlpatterns = [
